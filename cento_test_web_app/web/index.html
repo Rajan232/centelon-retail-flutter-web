@@ -34,5 +34,24 @@
 </head>
 <body>
   <script src="flutter_bootstrap.js" async></script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDpfmmDUy1LqgqEQVmrhlp0DaJOIswX4zs",
+      authDomain: "cento-web-test.firebaseapp.com",
+      projectId: "cento-web-test",
+      storageBucket: "cento-web-test.firebasestorage.app",
+      messagingSenderId: "455503766407",
+      appId: "1:455503766407:web:0ff1a96e964d23415d6922"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
 </body>
 </html>
