@@ -24,7 +24,7 @@ class _HomepageState extends State<Homepage> {
 
   Future<void> _initAudio() async {
     try {
-      await _player.setAudioSource(AudioSource.uri(Uri.parse('assets/music.mp3'))); // Replace with your audio file path
+      await _player.setAudioSource(AudioSource.asset('assets/music.mp3')); // Replace with your audio file path
       print('Loading Complete');// Replace with your audio file path
     } catch (e) {
       print('Error Loading Source');
