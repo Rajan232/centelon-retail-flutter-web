@@ -1,10 +1,9 @@
 // ignore_for_file: library_private_types_in_public_api
 
 import 'package:flutter/material.dart';
-import '../appcolours.dart';
+import 'appcolours.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:logging/logging.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -25,16 +24,10 @@ class _HomepageState extends State<Homepage> {
 
   Future<void> _initAudio() async {
     try {
-      await _player.setAudioSource(AudioSource.uri(Uri.parse('../assets/music.mp3'))); // Replace with your audio file path
+      await _player.setAudioSource(AudioSource.uri(Uri.parse('assets/music.mp3'))); // Replace with your audio file path
+      print('Loading Complete');// Replace with your audio file path
     } catch (e) {
-      // Import the logging package
-      
-
-      // Initialize the logger
-      final logger = Logger('Homepage');
-
-      // Log the error
-      logger.severe("Error loading audio source: $e");
+      print('Error Loading Source');
     }
     _player.playerStateStream.listen((playerState) {
       if (playerState.processingState == ProcessingState.completed) {
